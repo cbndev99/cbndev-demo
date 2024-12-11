@@ -13,7 +13,7 @@ function Nav() {
   const urlPath = location.pathname;
 
   return (
-    <nav className="h-full px-5 lg:px-10">
+    <nav className="h-full px-5 lg:px-10 desktop:px-[20rem] desktopxl:px-[30rem]">
       <div className="flex justify-between items-center h-full">
         <Link to="/">
           <div className="h-14 w-20 bg-orange-500 rounded-lg flex_center text-white font-bold">
@@ -26,7 +26,7 @@ function Nav() {
             <Link
               key={item.name}
               to={item.href}
-              className={`hover:text-orange-700 ${
+              className={`hover:text-orange-500 ${
                 urlPath == item.href ? "text-orange-500" : ""
               }`}
             >

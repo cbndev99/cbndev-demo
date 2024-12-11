@@ -6,6 +6,10 @@ export default {
       fontFamily: {
         mont: ["Montserrat", "sans-serif"],
       },
+      screens: {
+        desktop: "1920px",
+        desktopxl: "3040px",
+      },
     },
   },
   plugins: [],
