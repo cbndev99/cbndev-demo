@@ -9,26 +9,28 @@ import OurServicesPage from "./pages/OurServicesPage.jsx";
 import ContactUsPage from "./pages/ContactUsPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 
+const base_url = import.meta.env.VITE_BASE_URL;
+
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: base_url,
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: base_url,
         element: <HomePage />,
       },
       {
-        path: "/our-services",
+        path: `${base_url}our-services`,
         element: <OurServicesPage />,
       },
       {
-        path: "/contact-us",
+        path: `${base_url}contact-us`,
         element: <ContactUsPage />,
       },
       {
-        path: "/about-us",
+        path: `${base_url}about-us`,
         element: <AboutUsPage />,
       },
     ],
