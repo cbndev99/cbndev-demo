@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
+const base_url = import.meta.env.VITE_BASE_URL;
+
 const navigation = [
-  { name: "HOME", href: "/" },
-  { name: "OUR SERVICES", href: "/our-services" },
-  { name: "ABOUT US", href: "/about-us" },
-  { name: "CONTACT US", href: "/contact-us" },
+  { name: "HOME", href: base_url },
+  { name: "OUR SERVICES", href: `${base_url}our-services` },
+  { name: "ABOUT US", href: `${base_url}about-us` },
+  { name: "CONTACT US", href: `${base_url}contact-us` },
 ];
 
 function Nav() {
@@ -15,7 +17,7 @@ function Nav() {
   return (
     <nav className="h-full px-5 lg:px-10 desktop:px-[20rem] desktopxl:px-[30rem]">
       <div className="flex justify-between items-center h-full">
-        <Link to="/">
+        <Link to={base_url}>
           <div className="h-14 w-20 bg-orange-500 rounded-lg flex_center text-white font-bold">
             LOGO
           </div>
